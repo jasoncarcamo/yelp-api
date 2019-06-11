@@ -4,7 +4,6 @@ const apiKey = process.env.REACT_APP_API_KEY; // Insert API key here.
 const Yelp = {
   search(term, location, sortBy) {
 
-     console.log(process.env.apiKey)
       return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
         headers: {
           Authorization: `Bearer ${apiKey}`
@@ -14,8 +13,10 @@ const Yelp = {
       }).then
       (jsonResponse => {
         if (jsonResponse.businesses) {
+          console.log(jsonResponse)
           return jsonResponse.businesses.map(business => ({
             id: business.id,
+            url: business.url,
             imageSrc: business.image_url,
             name: business.name,
             address: business.location.address1,
