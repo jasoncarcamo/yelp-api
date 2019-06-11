@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/yep-api/static/css/main.a2c82b28.chunk.css",
+    "main.js": "/yep-api/static/js/main.d5febb59.chunk.js",
+    "main.js.map": "/yep-api/static/js/main.d5febb59.chunk.js.map",
+    "runtime~main.js": "/yep-api/static/js/runtime~main.08f11abc.js",
+    "runtime~main.js.map": "/yep-api/static/js/runtime~main.08f11abc.js.map",
+    "static/js/2.b37a6149.chunk.js": "/yep-api/static/js/2.b37a6149.chunk.js",
+    "static/js/2.b37a6149.chunk.js.map": "/yep-api/static/js/2.b37a6149.chunk.js.map",
+    "index.html": "/yep-api/index.html",
+    "precache-manifest.73f2f7c6a1a6d8fdf7c44b67722820e2.js": "/yep-api/precache-manifest.73f2f7c6a1a6d8fdf7c44b67722820e2.js",
+    "service-worker.js": "/yep-api/service-worker.js",
+    "static/css/main.a2c82b28.chunk.css.map": "/yep-api/static/css/main.a2c82b28.chunk.css.map",
+    "static/media/SearchBar.css": "/yep-api/static/media/background_search_mobile.5d0905e6.jpg"
+  }
+}

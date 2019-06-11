@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react';
+import './App.css';
+import BusinessList from './components/BussinessList/BusinessList';
+import SearchBar from './components/SearchBar/SearchBar';
+import Yelp from './Yelp';
+
+
+
+
+
+
+class App extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      businesses: [],
+      error: 'Input where the business is located'
+    }
+  }
+
+  searchYelp = (term, location, sortBy)=>{
+    
+    Yelp.search(term,location,sortBy).then(businesses=>{
+      this.setState({
+        businesses
+      })
+    })
+  }
+
+
+  render() {
+    
+
+    return (
+      <div className="App">
+  <h1>Yelp</h1>
+  <h2>{process.env.API_KEY}</h2>
+  <SearchBar searchYelp={this.searchYelp}/>
+  <BusinessList business={this.state.businesses}/>
+</div>
+    );
+  }
 }
 
 export default App;

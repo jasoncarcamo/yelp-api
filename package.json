@@ -1,20 +1,25 @@
 {
-  "name": "yelp",
+  "name": "ravenous",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jasoncarcamo.github.io/yep-api",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "dotenv": "^8.0.0",
+    "gh-pages": "^2.0.1",
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "react-scripts": "3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
